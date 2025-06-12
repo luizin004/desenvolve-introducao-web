@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Pesquisa de Satisfação</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    fieldset {
+      margin-bottom: 20px;
+      border: none;
+    }
+
+    legend {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .radios {
+      margin-top: 5px;
+    }
+
+    .radios label {
+      display: inline-block;
+      margin-right: 15px;
+    }
+
+    .checkbox-container {
+      margin-top: 15px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Pesquisa de Satisfação</h1>
+
+  <form>
+    <!-- Seção de Dados Pessoais -->
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" required>
+    </fieldset>
+
+    <!-- Seção da Pesquisa -->
+    <fieldset>
+      <legend>Pesquisa</legend>
+
+      <label>Você ficou satisfeito com nosso atendimento?</label>
+      <div class="radios">
+        <label><input type="radio" name="satisfacao" value="sim" required> Sim</label>
+        <label><input type="radio" name="satisfacao" value="nao"> Não</label>
+      </div>
+
+      <label>Você recomendaria nossos serviços?</label>
+      <div class="radios">
+        <label><input type="radio" name="recomendacao" value="sim" required> Sim</label>
+        <label><input type="radio" name="recomendacao" value="nao"> Não</label>
+      </div>
+
+      <label>Como você nos conheceu?</label>
+      <select name="origem" required>
+        <option value="">Selecione</option>
+        <option value="internet">Internet</option>
+        <option value="amigos">Amigos ou familiares</option>
+        <option value="tv">TV ou Rádio</option>
+        <option value="outros">Outros</option>
+      </select>
+    </fieldset>
+
+    <!-- Checkbox de autorização -->
+    <div class="checkbox-container">
+      <label>
+        <input type="checkbox" name="autorizacao" required>
+        Autorizo o compartilhamento da minha resposta com terceiros
+      </label>
+    </div>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+</body>
+</html>
