@@ -1,0 +1,59 @@
+/* ---------------------------
+   1. Aspectos gerais da página
+---------------------------- */
+
+/* a. Tamanho fixo da página inteira e centralização */
+body {
+  width: 960px;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif; /* b. Fonte sans-serif */
+}
+
+/* c. Indentar todos os parágrafos em 1em */
+p {
+  text-indent: 1em;
+}
+
+/* ---------------------------
+   2. Títulos
+---------------------------- */
+
+/* Alinhar todos os títulos ao centro */
+h1, h2, h3 {
+  text-align: center;
+}
+
+/* Tamanhos de títulos */
+h1 {
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+/* ---------------------------
+   3. Seções de resumo e principal
+---------------------------- */
+
+/* a. Alinhamento centralizado da seção de resumo */
+#zen-summary {
+  text-align: center;
+}
+
+/* b. Espaçamento entre linhas dos parágrafos da seção principal */
+#zen-explanation p {
+  line-height: 1.5;
+}
+
+/* ---------------------------
+   4. Abreviaturas em small-caps
+---------------------------- */
+
+abbr {
+  font-variant: small-caps;
+}
