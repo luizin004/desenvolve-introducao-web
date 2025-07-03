@@ -1,0 +1,203 @@
+/* Paleta de cores */
+:root {
+  --cor-principal: #2c3e50;      /* azul escuro */
+  --cor-secundaria: #ecf0f1;     /* cinza claro */
+  --cor-destaque: #e74c3c;       /* vermelho */
+}
+
+/* Fontes */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-principal);
+  margin: 0;
+  padding: 0 1rem;
+}
+
+/* Títulos com fonte diferente */
+h1, h2, h3 {
+  font-family: 'Georgia', serif;
+  color: var(--cor-principal);
+  margin-top: 0;
+}
+
+/* Navegação fixa */
+nav {
+  background-color: var(--cor-principal);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  flex-wrap: wrap;
+}
+
+.nav-menu li {
+  margin: 0 1rem;
+}
+
+.nav-menu a {
+  color: var(--cor-secundaria);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem;
+  display: block;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus {
+  background-color: var(--cor-destaque);
+  color: white;
+  border-radius: 4px;
+}
+
+/* Espaço para o conteúdo não ficar atrás do menu */
+body > *:not(nav) {
+  margin-top: 60px;
+}
+
+/* Cabeçalho / Apresentação */
+header#apresentacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: white;
+  padding: 2rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(44,62,80,0.1);
+  margin-bottom: 2rem;
+}
+
+header#apresentacao h1 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+header#apresentacao img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 4px solid var(--cor-destaque);
+}
+
+header#apresentacao .apresentacao-texto {
+  max-width: 600px;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+header#apresentacao .contato p {
+  margin: 0.2rem 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Seções */
+section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(44,62,80,0.1);
+  margin-bottom: 2rem;
+}
+
+/* Alinhamento vertical dos registros */
+.registro-educacao,
+.registro-certificacao,
+.registro-experiencia {
+  margin-bottom: 1.5rem;
+}
+
+/* Títulos dentro das seções */
+section h2 {
+  border-bottom: 2px solid var(--cor-destaque);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Destacar nome do curso nas certificações */
+.registro-certificacao p strong {
+  font-weight: bold;
+  color: var(--cor-destaque);
+}
+
+/* Responsividade */
+
+/* Layout mobile: menu vertical e seções empilhadas */
+@media (max-width: 767px) {
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav-menu li {
+    margin: 0.5rem 0;
+  }
+
+  header#apresentacao {
+    padding: 1rem;
+  }
+
+  header#apresentacao img {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Alinhar verticalmente os dados da apresentação */
+  header#apresentacao {
+    flex-direction: column;
+  }
+
+  /* Empilhar seções verticalmente */
+  section {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--cor-principal);
+  color: var(--cor-secundaria);
+  padding: 1.5rem;
+  text-align: center;
+  border-top: 4px solid var(--cor-destaque);
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-links li a {
+  color: var(--cor-secundaria);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--cor-secundaria);
+  border-radius: 4px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.social-links li a:hover,
+.social-links li a:focus {
+  background-color: var(--cor-destaque);
+  border-color: var(--cor-destaque);
+  color: white;
+}
