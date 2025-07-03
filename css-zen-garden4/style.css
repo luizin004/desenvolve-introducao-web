@@ -1,0 +1,23 @@
+/* 1. Definir .page-wrapper como referência para posicionamento */
+.page-wrapper {
+  position: relative; /* referencia para elementos posicionados dentro dela */
+}
+
+/* 2. Estilos para o painel .explanation */
+.explanation {
+  width: 60%;
+  margin-right: 35%;       /* cria espaço à direita */
+  border-right: 1px solid #1f295c;
+  padding-right: 2%;       /* espaçamento interno à direita */
+  box-sizing: border-box;  /* garante que padding e border fiquem dentro da largura */
+}
+
+/* 3. Posicionar menu de designs à direita do .explanation */
+.design-menu {              /* supondo que esta seja a classe do menu de designs */
+  position: absolute;
+  top: 560px;               /* inicia logo após a introdução */
+  left: 62%;                /* começa após o .explanation */
+  width: 33%;               /* ocupa o espaço restante (aprox.) */
+  padding: 0 2%;            /* espaçamento horizontal interno para centralizar conteúdo */
+  box-sizing: border-box;
+}
