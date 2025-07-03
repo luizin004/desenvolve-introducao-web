@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Exemplo de Links e Menu</title>
+  <style>
+    /* CSS que você pediu */
+    :root {
+      --cor-destaque: #ffbf00;
+    }
+
+    a {
+      color: var(--cor-destaque);
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover,
+    a:focus {
+      color: #ffd966;
+    }
+
+    a:active {
+      color: #cc9900;
+    }
+
+    a:visited {
+      font-weight: normal;
+      color: var(--cor-destaque);
+    }
+
+    main p:first-of-type::first-letter {
+      font-size: 3em;
+      font-family: 'Georgia', serif;
+      float: left;
+      line-height: 1;
+      margin-right: 0.1em;
+      font-weight: normal;
+    }
+
+    .menu-design li {
+      border-top: 1px solid #ccc;
+      padding: 0.5em 0;
+      list-style: none;
+    }
+
+    .menu-design li:last-child {
+      border-bottom: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <p>
+      Este é o primeiro parágrafo da seção principal, com a primeira letra destacada.
+      O texto aqui é apenas um exemplo para demonstrar o estilo aplicado.
+    </p>
+    <p>
+      Segundo parágrafo, sem destaque especial.
+    </p>
+    <p>
+      Veja mais em <a href="#">nossos links</a> e explore o conteúdo.
+    </p>
+  </main>
+
+  <nav>
+    <ul class="menu-design">
+      <li><a href="#">Design 1</a></li>
+      <li><a href="#">Design 2</a></li>
+      <li><a href="#">Design 3</a></li>
+      <li><a href="#">Design 4</a></li>
+    </ul>
+  </nav>
+
+</body>
+</html>

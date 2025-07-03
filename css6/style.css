@@ -1,0 +1,68 @@
+/* 1. Rodapé da seção principal - flexbox para centralizar links com espaçamento */
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;               /* espaçamento entre os links */
+  flex-wrap: wrap;         /* permite quebra de linha */
+  padding: 1em 0;
+}
+
+footer a {
+  flex: 0 1 120px;         /* mesmo tamanho fixo aproximado para todos os links */
+  text-align: center;
+  padding: 0.5em 1em;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: inherit;
+}
+
+/* 2. Seção de benefícios - texto à esquerda, título à direita, alinhamento vertical */
+.benefits {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 1em 0;
+}
+
+.benefits .text {
+  width: 70%;
+}
+
+.benefits .title {
+  width: 30%;
+  display: flex;
+  align-items: center;    /* centraliza verticalmente */
+  justify-content: flex-end; /* título à direita */
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* 3. Seção de participação - itens 50% cada e título centralizado verticalmente */
+.participation {
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em 0;
+}
+
+.participation .item {
+  flex: 0 0 50%;
+  box-sizing: border-box;
+  padding: 0 1em;
+  display: flex;
+  align-items: center;  /* centraliza verticalmente */
+}
+
+.participation .item .title {
+  margin-left: auto;
+  font-weight: bold;
+}
+
+/* 4. Remover borda duplicada entre benefícios e participação */
+/* Fazemos a borda inferior em benefícios e superior só na participação, mas escondemos a superior do primeiro */
+.participation {
+  border-top: none; /* remover para evitar duplicação */
+}
