@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício de CSS</title>
+  <style>
+    /* Exercício 1 - Links */
+    a {
+      color: red;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: lemonchiffon; /* cor similar ao "limão" */
+    }
+
+    /* Exercício 2 - Parágrafos */
+    p {
+      font-family: Arial, sans-serif;
+    }
+
+    h1 + p {
+      font-weight: bold;
+    }
+
+    /* Exercício 3 - Classe .destaque */
+    .destaque {
+      font-family: Arial, sans-serif;
+    }
+
+    p.destaque {
+      font-weight: bold;
+    }
+
+    strong.destaque {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Meu Título Principal</h1>
+  <p>Este parágrafo não vem logo após o h1.</p>
+  <h1>Outro Título</h1>
+  <p>Parágrafo logo após h1 – deve ficar em <strong>negrito</strong>.</p>
+
+  <p class="destaque">Parágrafo com classe "destaque" – deve estar em negrito Arial.</p>
+  <strong class="destaque">Texto em negrito com classe "destaque" – deve ficar vermelho.</strong>
+
+  <p>
+    Veja mais em <a href="#">nosso site</a> ou <a href="#">acesse aqui</a>.
+  </p>
+
+</body>
+</html>
